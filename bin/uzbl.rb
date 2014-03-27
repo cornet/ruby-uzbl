@@ -3,13 +3,19 @@
 require 'uzbl'
 require 'wmctrl'
 
-w1 = Uzbl.create('http://google.com')
-w2 = Uzbl.create('http://sheepy.org')
+# Close all existing windows
+Uzbl.close_all
+
+# Start some new ones
+google = Uzbl.create('http://google.com')
+sheepy = Uzbl.create('http://sheepy.org')
 
 # Disable status bar on both windows
-w1.status_bar false
-w2.status_bar false
+google.status_bar false
+sheepy.status_bar false
 
 # make sure w1 is on top
-w1.focus
+google.focus
+
+sleep 5
 

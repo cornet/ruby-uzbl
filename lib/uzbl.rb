@@ -13,4 +13,10 @@ module Uzbl
     sleep 1
     Uzbl::Window.new WMCtrl.instance.windows(:pid => pid).first
   end
+
+  def self.close_all
+    WMCtrl.instance.windows(:wm_class => /^uzbl-core.Uzbl-core$/).each do |window|
+      Process.kill("TERM", window.pid)
+    end
+  end
 end
