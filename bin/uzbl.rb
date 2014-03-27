@@ -11,5 +11,5 @@ w1.status_bar false
 w2.status_bar false
 
 # make sure w1 is on top
-w1.raise
+w1.focus
 

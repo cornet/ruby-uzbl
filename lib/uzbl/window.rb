@@ -10,7 +10,7 @@ class Uzbl::Window
     @window.pid
   end
 
-  def raise
+  def focus
     @window.activate
   end
 
