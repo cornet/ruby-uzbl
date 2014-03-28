@@ -14,8 +14,7 @@ sheepy = Uzbl.create('http://sheepy.org')
 google.status_bar false
 sheepy.status_bar false
 
-# make sure w1 is on top
-google.focus
-
-sleep 5
-
+Uzbl.find_windows.cycle do |window|
+  window.focus
+  sleep 10
+end
