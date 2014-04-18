@@ -18,6 +18,16 @@ I've also created a [puppet repo](https://github.com/cornet/pi-kiosk-puppet) to 
 
 ## Installation
 
+Clone the repo:
+
+    git clone git@github.com:cornet/ruby-uzbl.git
+
+Build and install the gem:
+
+    cd ruby-uzbl
+    gem build uzbl.gemspec
+    gem install uzbl-0.0.1.gem
+
 Add this line to your application's Gemfile:
 
     gem 'uzbl'
